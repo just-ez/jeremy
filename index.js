@@ -1,6 +1,8 @@
 
 
 
+gsap.registerPlugin(ScrollTrigger);
+
 
 
 const timeline = gsap.timeline({duration: 1})
@@ -49,4 +51,19 @@ timeline.from('.arrow-down', {
     opacity: 0,
     ease: 'bounce',
     // delay: 3
+})
+
+gsap.from('.about', {
+    opacity: 0,
+    y: '100%',
+    duration: 1,
+    scrollTrigger: '.about',
+    ease: 'power2.Out'
+})
+
+gsap.from('.work-header', {
+    opacity: 0,
+    x: '-100%',
+    duration: 1,
+    scrollTrigger: '.work-header'
 })
